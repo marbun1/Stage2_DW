@@ -1,4 +1,4 @@
-# 📝 Stage 2 Day 4 - Mini Store
+# 📝 Stage 2 Day 4 - Mini Store (checkpoint 2)
 Repository to store our learning progress at Dumbways.id Bootcamp
 
 ## 🎯 Topic & Task
