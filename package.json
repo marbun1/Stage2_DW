@@ -1,0 +1,32 @@
+{
+  "name": "day1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marbun1/Stage2_day1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marbun1/Stage2_day1/issues"
+  },
+  "homepage": "https://github.com/marbun1/Stage2_day1#readme",
+  "dependencies": {
+    "@prisma/client": "^6.19.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "prisma": "^6.19.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}
