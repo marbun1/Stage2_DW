@@ -14,14 +14,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Product {
-    id        Int      @id @default(autoincrement())
-    name      String
-    price     Int
-    stock  Int
-    orders Order[]
-  }
-
   model User {
     id Int @id @default(autoincrement())
     name String
@@ -40,4 +32,32 @@ model Order {
 
   user User @relation(fields: [UserId], references : [id])
   product  Product @relation(fields: [productId], references : [id])
+}
+
+model Product {
+  id        Int     @id @default(autoincrement())
+  name      String
+  price     Int
+  stock     Int     @default(0)
+  orders    Order[]
+  stocks    Stock[]
+}
+
+model Supplier {
+  id     Int    @id @default(autoincrement())
+  name   String
+
+  stocks Stock[]
+}
+
+model Stock {
+  id         Int @id @default(autoincrement())
+  productId  Int
+  supplierId Int
+  quantity   Int
+
+  product   Product  @relation(fields: [productId], references: [id])
+  supplier  Supplier @relation(fields: [supplierId], references: [id])
+
+  @@unique([supplierId, productId])
 }
